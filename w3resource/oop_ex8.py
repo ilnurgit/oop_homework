@@ -1,11 +1,12 @@
 class Cart:
-
     def __init__(self, cart) -> None:
         self.cart: dict[str, list[int]] = cart
 
     def add_product(self, product: str, qty: int, price: float) -> None:
         if qty < 0 or price < 0:
-            raise ValueError("Количество товаров и цена не может быть меньше или равно нулю!")
+            raise ValueError(
+                "Количество товаров и цена не может быть меньше или равно нулю!"
+            )
         self.cart[product] = [qty, price]
 
     def del_product(self, product: str) -> None:

@@ -2,7 +2,6 @@ from math import pi
 
 
 class Figure:
-
     @property
     def perimeter(self):
         pass
@@ -13,7 +12,6 @@ class Figure:
 
 
 class Circle(Figure):
-
     def __init__(self, radius: float) -> None:
         self.radius = radius
 
@@ -23,11 +21,10 @@ class Circle(Figure):
 
     @property
     def area(self) -> float:
-        return round(pi * self.radius ** 2)
+        return round(pi * self.radius**2)
 
 
 class Triangle(Figure):
-
     def __init__(self, a: float, b: float, c: float, h: float) -> None:
         self.a = a
         self.b = b
@@ -44,7 +41,6 @@ class Triangle(Figure):
 
 
 class Square(Figure):
-
     def __init__(self, a: float) -> None:
         self.a = a
 
@@ -54,7 +50,7 @@ class Square(Figure):
 
     @property
     def area(self) -> float:
-        return round(self.a ** 2)
+        return round(self.a**2)
 
 
 trg = Triangle(1, 2, 6, 4)

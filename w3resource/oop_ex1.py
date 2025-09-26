@@ -2,13 +2,12 @@ from math import pi
 
 
 class Circle:
-
     def __init__(self, radius: float) -> None:
         self.radius = radius
 
     @property
     def area(self) -> float:
-        return round(pi * self.radius ** 2, 2)
+        return round(pi * self.radius**2, 2)
 
     @property
     def perimetr(self) -> float:
