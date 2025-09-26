@@ -1,5 +1,4 @@
 class Bank:
-
     def __init__(self) -> None:
         self.customers = {}
 
@@ -18,7 +17,8 @@ class Bank:
             raise ValueError("Аккаунт с таким id не существует!")
         self.customers[id_account] += amount
         print(
-            f"Аккаунт с id:{id_account} успешно пополнен на сумму:{amount}. Итогоый баланс: {self.customers[id_account]}")
+            f"Аккаунт с id:{id_account} успешно пополнен на сумму:{amount}. Итогоый баланс: {self.customers[id_account]}"
+        )
 
     def withdrawal(self, id_account: int, amount: float) -> None:
         if amount <= 0:
@@ -29,12 +29,13 @@ class Bank:
             raise ValueError("Аккаунт с таким id не существует!")
         self.customers[id_account] -= amount
         print(
-            f"С аккаунта с id:{id_account} успешно произведено снятие на сумму:{amount}. Итогоый баланс: {self.customers[id_account]}")
+            f"С аккаунта с id:{id_account} успешно произведено снятие на сумму:{amount}. Итогоый баланс: {self.customers[id_account]}"
+        )
 
     def check_balance(self, id_account: int) -> str:
         if id_account not in self.customers:
             raise ValueError("Аккаунт с таким id не существует!")
-        return (f"Баланс аккаунта с id: {id_account} равен: {self.customers[id_account]}")
+        return f"Баланс аккаунта с id: {id_account} равен: {self.customers[id_account]}"
 
 
 bank = Bank()

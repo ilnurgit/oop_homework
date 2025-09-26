@@ -1,20 +1,19 @@
 from abc import ABC, abstractmethod
 
+
 class Animal(ABC):
     def __init__(self, name: str) -> None:
         self.name = name
 
     @abstractmethod
-    def make_noise(self) -> str:
-        ...
+    def make_noise(self) -> str: ...
 
     @abstractmethod
-    def eat(self) -> str:
-        ...
+    def eat(self) -> str: ...
 
     @abstractmethod
-    def get_description(self) -> str:
-        ...
+    def get_description(self) -> str: ...
+
 
 class Dog(Animal):
     def make_noise(self) -> str:
@@ -26,6 +25,7 @@ class Dog(Animal):
     def get_description(self) -> str:
         return "злой"
 
+
 class Cat(Animal):
     def make_noise(self) -> str:
         return "МЯУ - МЯУ"
@@ -35,6 +35,7 @@ class Cat(Animal):
 
     def get_description(self) -> str:
         return "добрый"
+
 
 class Bear(Animal):
     def make_noise(self) -> str:
@@ -46,10 +47,12 @@ class Bear(Animal):
     def get_description(self) -> str:
         return "большой и злой"
 
+
 class Vet:
     def treat_animal(self, animal: Animal) -> None:
         print(f"Пациент: {animal.name}")
         print(f"Описание пациента: {animal.get_description()}")
+
 
 def main() -> None:
     vet = Vet()
@@ -69,6 +72,7 @@ def main() -> None:
         print(f"{animal.name} издает звук: {animal.make_noise()}")
         print(f"{animal.name} питается: {animal.eat()}")
         print("-" * 20)
+
 
 if __name__ == "__main__":
     main()
